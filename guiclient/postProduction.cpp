@@ -306,6 +306,7 @@ int postProduction::handleSeriesAdjustBeforePost()
       " AND wo_id = :wo_id "
       " AND itemsite.itemsite_item_id=item.item_id "
       " AND isControlledItemsite(itemsite.itemsite_id) "
+      " AND isInventoryItemsite(itemsite.itemsite_id) "
       "ORDER BY womatl_id;");
     backflushItems.bindValue(":wo_id", _wo->id());
     if (_wo->method() == "A")
