@@ -1389,7 +1389,7 @@ void itemSite::populateLocations()
     query.bindValue(":item_id", _item->id());
     query.exec();
     _locations->populate(query);
-    _recvlocations->populate(query);
+    //_recvlocations->populate(query);
     _issuelocations->populate(query);
     sDefaultLocChanged();
     sFillRestricted();

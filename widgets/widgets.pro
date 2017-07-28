@@ -70,6 +70,7 @@ HEADERS += plugins/addressclusterplugin.h \
     plugins/itemclusterplugin.h \
     plugins/itemgroupclusterplugin.h \
     plugins/itemlineeditplugin.h \
+    plugins/locationclusterplugin.h \
     plugins/lotserialclusterplugin.h \
     plugins/lotserialseqclusterplugin.h \
     plugins/menubuttonplugin.h \
@@ -162,6 +163,7 @@ SOURCES += widgets.cpp \
     itemAliasList.cpp \
     itemCluster.cpp \
     itemgroupcluster.cpp \
+    locationcluster.cpp \
     lotserialCluster.cpp \
     lotserialseqcluster.cpp \
     menubutton.cpp \
@@ -261,6 +263,7 @@ HEADERS += widgets.h \
     itemAliasList.h \
     itemcluster.h \
     itemgroupcluster.h \
+    locationcluster.h \
     lotserialCluster.h \
     lotserialseqcluster.h \
     menubutton.h        \

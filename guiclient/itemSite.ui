@@ -799,15 +799,22 @@ to be bound by its terms.</comment>
                <item row="0" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_11">
                  <item>
-                  <widget class="XComboBox" name="_recvlocations">
+                  <widget class="WorkCenterCluster" name="_wcc">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
                      <verstretch>0</verstretch>
                     </sizepolicy>
                    </property>
-                   <property name="allowNull">
-                    <bool>true</bool>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="LocationCluster" name="_recvlocations">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
                    </property>
                   </widget>
                  </item>

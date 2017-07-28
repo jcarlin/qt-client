@@ -47,6 +47,7 @@
 #include "plugins/itemclusterplugin.h"
 #include "plugins/itemgroupclusterplugin.h"
 #include "plugins/itemlineeditplugin.h"
+#include "plugins/locationclusterplugin.h"
 #include "plugins/lotserialclusterplugin.h"
 #include "plugins/lotserialseqclusterplugin.h"
 #include "plugins/numbergencomboboxplugin.h"
@@ -130,6 +131,7 @@ xTuplePlugin::xTuplePlugin(QObject * parent) : QObject(parent)
   m_plugins.append(new ItemClusterPlugin(this));
   m_plugins.append(new ItemGroupClusterPlugin(this));
   m_plugins.append(new ItemLineEditPlugin(this));
+  m_plugins.append(new LocationClusterPlugin(this));
   m_plugins.append(new LotserialClusterPlugin(this));
   m_plugins.append(new LotserialseqClusterPlugin(this));
   m_plugins.append(new MenuButtonPlugin(this));
