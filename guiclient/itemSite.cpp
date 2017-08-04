@@ -1369,30 +1369,17 @@ void itemSite::sCacheItemType(char pItemType)
 
 void itemSite::populateLocations()
 {
-    XSqlQuery query;
-    query.prepare( "SELECT location_id, formatLocationName(location_id) AS locationname "
-                   "FROM location "
-                   "WHERE ( (location_warehous_id=:warehous_id)"
-                   " AND (NOT location_restrict) "
-                   " AND (location_active) ) "
-		       
-                   "UNION SELECT location_id, formatLocationName(location_id) AS locationname "
-                   "FROM location, locitem "
-                   "WHERE ( (location_warehous_id=:warehous_id)"
-                   " AND (location_restrict) "
-                   " AND (location_active) "
-                   " AND (locitem_location_id=location_id)"
-                   " AND (locitem_item_id=:item_id) ) "
-		       
-                   "ORDER BY locationname;" );
-    query.bindValue(":warehous_id", _warehouse->id());
-    query.bindValue(":item_id", _item->id());
-    query.exec();
-    _locations->populate(query);
-    //_recvlocations->populate(query);
-    _issuelocations->populate(query);
     sDefaultLocChanged();
     sFillRestricted();
+
+    _recvlocations->setItemId(_item->id());
+    _recvlocations->setWhId(_warehouse->id());
+
+    _locations->setItemId(_item->id());
+    _locations->setWhId(_warehouse->id());
+
+    _issuelocations->setItemId(_item->id());
+    _issuelocations->setWhId(_warehouse->id());
 }
 
 void itemSite::populate()

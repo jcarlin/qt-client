@@ -725,7 +725,7 @@ to be bound by its terms.</comment>
           <item row="1" column="0" colspan="2">
            <widget class="QGroupBox" name="_useDefaultLocation">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -799,16 +799,6 @@ to be bound by its terms.</comment>
                <item row="0" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_11">
                  <item>
-                  <widget class="WorkCenterCluster" name="_wcc">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="LocationCluster" name="_recvlocations">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -856,15 +846,12 @@ to be bound by its terms.</comment>
                <item row="1" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
                  <item>
-                  <widget class="XComboBox" name="_locations">
+                  <widget class="LocationCluster" name="_locations">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
                      <verstretch>0</verstretch>
                     </sizepolicy>
-                   </property>
-                   <property name="allowNull">
-                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -906,15 +893,12 @@ to be bound by its terms.</comment>
                <item row="2" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_13">
                  <item>
-                  <widget class="XComboBox" name="_issuelocations">
+                  <widget class="LocationCluster" name="_issuelocations">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
                      <verstretch>0</verstretch>
                     </sizepolicy>
-                   </property>
-                   <property name="allowNull">
-                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
